@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "node --max_old_space_size=4096 node_modules/.bin/vue-cli-service test:unit --coverage --detectOpenHandles",
+    "test": "vue-cli-service test:unit",
+    "lint:pre-commit": "eslint -c ./.eslintrc.js $(git diff --cached --name-only --diff-filter=AM | grep  -E \"(.js$|.ts$)\") --cache --cache-location node_modules/.cache/eslint",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -34,6 +36,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
+    "lint-prepush": "^2.2.1",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
