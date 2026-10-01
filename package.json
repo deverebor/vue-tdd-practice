@@ -33,7 +33,7 @@
     "babel-jest": "^27.0.6",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.5",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
     "lint-prepush": "^2.2.1",
